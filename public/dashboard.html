@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — EverSupply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <div id="navbar"></div>
+  <div class="content-area">
+  <div class="shell page-fade">
+    <div class="eyebrow">Live · Real Data</div>
+    <h1>Resilience Dashboard</h1>
+    <p class="subtitle">Every number here comes from the live database — whatever vendor you add on the Vendors page appears here instantly.</p>
+
+    <div class="stat-strip">
+      <div class="stat-box">
+        <div class="stat-label">Resilience Score</div>
+        <div class="stat-value" id="resilienceScore">—</div>
+        <div class="stat-sub" id="resilienceSub">Loading...</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Vendors Registered</div>
+        <div class="stat-value" id="vendorCount">—</div>
+        <div class="stat-sub">Added by you</div>
+      </div>
+      <div class="stat-box wa">
+        <div class="stat-label">Active Alerts</div>
+        <div class="stat-value" id="alertCount">—</div>
+        <div class="stat-sub">High-risk vendors</div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <div class="panel-title">🧵 Order Journey</div>
+        <div class="panel-note">Sorted by vendor stage order, with each vendor's preferred language</div>
+        <div class="journey" id="journey"></div>
+        <p class="empty-hint" id="journeyEmpty" style="display:none;">No vendors yet — add your data on the <a href="/vendors">Vendors page</a>.</p>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Vendor Trust Scores</div>
+        <div class="panel-note">Updates automatically on every real WhatsApp message or test</div>
+        <div id="trustList"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">⚖️ Alternative Vendor Recommendations</div>
+      <div class="panel-note">Automatically compares vendors at the same stage when one goes high-risk. Add more than one vendor per stage to enable this.</div>
+      <div id="comparisonWrap"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">💬 Recent WhatsApp Activity</div>
+      <div class="panel-note">Live feed of real messages received and replies sent — updates every few seconds</div>
+      <div id="recentMessages"></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script src="/nav.js"></script>
+<script src="/app.js"></script>
+<script>loadDashboard(); loadRecentMessages(); loadComparisons(); setInterval(loadDashboard, 5000); setInterval(loadRecentMessages, 4000); setInterval(loadComparisons, 5000);</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+[
+  {
+    "time": "2026-09-01T12:48:01.022Z",
+    "text": "Prachi (Dying) — WhatsApp: \"machine bilkul band hai, worker bhi nahi hai, 5 din lagenge\" → Risk: HIGH, delay ~5d [gemini]",
+    "type": "high"
+  },
+  {
+    "time": "2026-09-01T12:29:43.325Z",
+    "text": "[TEST] Prachi (Dying, English): \"No power in the area, machine is down, at least 2 days delay expected\" → Risk: HIGH",
+    "type": "high"
+  },
+  {
+    "time": "2026-09-01T12:29:15.724Z",
+    "text": "Prachi (Dying) — WhatsApp: \"light nhi h 2 din bad order mielga\" → Risk: MEDIUM, delay ~2d [gemini]",
+    "type": "medium"
+  },
+  {
+    "time": "2026-09-01T12:26:52.621Z",
+    "text": "AI analysis fail hua for Prachi: Unterminated string in JSON at position 19 (line 2 column 18)",
+    "type": "error"
+  },
+  {
+    "time": "2026-09-01T12:24:34.942Z",
+    "text": "AI analysis fail hua for Prachi: Unexpected token '`', \"`category`\"... is not valid JSON",
+    "type": "error"
+  },
+  {
+    "time": "2026-09-01T12:19:45.664Z",
+    "text": "AI analysis fail hua for Prachi: {\"error\":{\"code\":404,\"message\":\"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API.\",\"status\":\"NOT_FOUND\"}}",
+    "type": "error"
+  },
+  {
+    "time": "2026-09-01T12:19:14.511Z",
+    "text": "Naya vendor add hua: Prachi (Dying), language: English",
+    "type": "info"
+  },
+  {
+    "time": "2026-09-01T12:19:01.594Z",
+    "text": "Vendor delete hua: Prachi",
+    "type": "info"
+  },
+  {
+    "time": "2026-09-01T12:12:35.170Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T12:01:53.290Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T11:29:48.444Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T11:28:28.312Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T11:27:09.065Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T11:21:58.233Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T11:10:13.617Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T10:48:29.560Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T10:38:47.014Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T08:40:25.836Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  },
+  {
+    "time": "2026-09-01T08:39:52.028Z",
+    "text": "Naya vendor add hua: Arnav (Dying), language: English",
+    "type": "info"
+  },
+  {
+    "time": "2026-09-01T08:38:58.352Z",
+    "text": "Naya vendor add hua: Prachi (Dying), language: English",
+    "type": "info"
+  },
+  {
+    "time": "2026-09-01T08:33:19.209Z",
+    "text": "Unknown number se message aaya: 917060202017",
+    "type": "warning"
+  }
+]

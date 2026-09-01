@@ -1,0 +1,89 @@
+[
+  {
+    "id": "mtif2bx6e0oz2",
+    "name": "Arnav",
+    "stage": "Dying",
+    "phone": "6398914140",
+    "language": "en",
+    "initialReliability": 55,
+    "trustScore": 55,
+    "cost": 100,
+    "deliveryDays": 2,
+    "distanceKm": 5,
+    "order": 1,
+    "history": [
+      {
+        "time": "2026-09-01T08:39:52.026Z",
+        "score": 55,
+        "riskLevel": "baseline"
+      }
+    ],
+    "conversation": [],
+    "lastMessage": null,
+    "lastRisk": null,
+    "createdAt": "2026-09-01T08:39:52.026Z"
+  },
+  {
+    "id": "mtimwg5n8qik5",
+    "name": "Prachi",
+    "stage": "Dying",
+    "phone": "917060202017",
+    "language": "en",
+    "initialReliability": 75,
+    "trustScore": 57,
+    "cost": 100,
+    "deliveryDays": 2,
+    "distanceKm": 5,
+    "order": 1,
+    "history": [
+      {
+        "time": "2026-09-01T12:19:14.508Z",
+        "score": 75,
+        "riskLevel": "baseline"
+      },
+      {
+        "time": "2026-09-01T12:29:43.322Z",
+        "score": 66,
+        "riskLevel": "high"
+      },
+      {
+        "time": "2026-09-01T12:48:01.015Z",
+        "score": 57,
+        "riskLevel": "high"
+      }
+    ],
+    "conversation": [
+      {
+        "direction": "in",
+        "text": "No power in the area, machine is down, at least 2 days delay expected",
+        "time": "2026-09-01T12:29:43.322Z",
+        "source": "test"
+      },
+      {
+        "direction": "out",
+        "text": "Thanks for letting us know, Prachi. Please keep us updated once the power is back and work resumes.",
+        "time": "2026-09-01T12:29:43.322Z",
+        "source": "test"
+      },
+      {
+        "direction": "in",
+        "text": "machine bilkul band hai, worker bhi nahi hai, 5 din lagenge",
+        "time": "2026-09-01T12:48:01.015Z",
+        "source": "whatsapp"
+      },
+      {
+        "direction": "out",
+        "text": "Thanks for the update, Prachi. We have noted the 5-day delay due to machine and labor issues. Please keep us posted.",
+        "time": "2026-09-01T12:48:01.015Z",
+        "source": "whatsapp"
+      }
+    ],
+    "lastMessage": "machine bilkul band hai, worker bhi nahi hai, 5 din lagenge",
+    "lastRisk": "high",
+    "createdAt": "2026-09-01T12:19:14.508Z",
+    "lastReason": "Machine breakdown and lack of workers will cause a 5-day delay in dyeing.",
+    "lastDelayDays": 5,
+    "lastCategory": "machine",
+    "lastUpdated": "2026-09-01T12:48:01.015Z"
+  }
+]

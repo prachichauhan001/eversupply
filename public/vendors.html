@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendors — EverSupply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <div id="navbar"></div>
+  <div class="content-area">
+  <div class="shell page-fade">
+    <div class="eyebrow">Your Data</div>
+    <h1>Vendor Management</h1>
+    <p class="subtitle">Add your own real vendors — name, stage, WhatsApp number, and the language they message in. The AI will always reply in that language.</p>
+
+    <div class="panel">
+      <div class="panel-title">+ Add a New Vendor</div>
+      <form id="vendorForm">
+        <div class="form-row">
+          <div>
+            <label>Vendor Name</label>
+            <input type="text" id="f-name" placeholder="e.g. Ramesh Dyeing Unit" required>
+          </div>
+          <div>
+            <label>Stage / Role</label>
+            <input type="text" id="f-stage" placeholder="e.g. Dyeing" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>WhatsApp Number (with country code, no +)</label>
+            <input type="text" id="f-phone" placeholder="919999999999" required>
+          </div>
+          <div>
+            <label>Preferred Language</label>
+            <select id="f-language">
+              <option value="en" selected>English</option>
+              <option value="hi">Hindi (हिंदी)</option>
+              <option value="ta">Tamil (தமிழ்)</option>
+              <option value="te">Telugu (తెలుగు)</option>
+              <option value="gu">Gujarati (ગુજરાતી)</option>
+              <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
+              <option value="bn">Bengali (বাংলা)</option>
+              <option value="mr">Marathi (मराठी)</option>
+              <option value="kn">Kannada (ಕನ್ನಡ)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>Stage Order (position in timeline)</label>
+            <input type="number" id="f-order" value="1">
+          </div>
+          <div>
+            <label>Initial Reliability Score (0-100)</label>
+            <input type="number" id="f-reliability" value="75" min="0" max="100">
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>Delivery Time (days)</label>
+            <input type="number" id="f-delivery" value="2">
+          </div>
+          <div>
+            <label>Cost Index (100 = baseline)</label>
+            <input type="number" id="f-cost" value="100">
+          </div>
+        </div>
+        <label>Distance (km)</label>
+        <input type="number" id="f-distance" value="5">
+        <button type="submit" class="btn-primary" style="margin-top:18px;">Add Vendor</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Registered Vendors</div>
+      <div id="vendorTableWrap"></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script src="/nav.js"></script>
+<script src="/app.js"></script>
+<script>loadVendorTable();</script>
+</body>
+</html>

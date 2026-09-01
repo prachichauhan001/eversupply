@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity Log — EverSupply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <div id="navbar"></div>
+  <div class="content-area">
+  <div class="shell page-fade">
+    <div class="eyebrow">Activity</div>
+    <h1>Action Log</h1>
+    <p class="subtitle">Every real WhatsApp message and test run, recorded as an audit trail — this is what the Compliance Agent references when explaining a decision.</p>
+    <div class="panel">
+      <div id="logList"></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script src="/nav.js"></script>
+<script src="/app.js"></script>
+<script>loadLogs(); setInterval(loadLogs, 5000);</script>
+</body>
+</html>

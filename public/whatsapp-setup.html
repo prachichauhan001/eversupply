@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp Setup — EverSupply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <div id="navbar"></div>
+  <div class="content-area">
+  <div class="shell page-fade">
+    <div class="eyebrow wa">💬 Real Integration</div>
+    <h1>Connect Real WhatsApp</h1>
+    <p class="subtitle">The backend already exposes a real, working webhook at <code>/webhook/whatsapp</code>. Connect it to Twilio in six steps:</p>
+
+    <div class="panel">
+      <div class="wa-step"><strong>1. Create a Twilio account</strong><p>Sign up free at <a href="https://www.twilio.com/try-twilio" target="_blank">twilio.com/try-twilio</a>. Copy your Account SID and Auth Token from the Console Dashboard into your <code>.env</code> file.</p></div>
+      <div class="wa-step"><strong>2. Activate the WhatsApp Sandbox</strong><p>Twilio Console → Messaging → Try it out → Send a WhatsApp message. You'll get a sandbox number and a "join &lt;code&gt;" message.</p></div>
+      <div class="wa-step"><strong>3. Connect your phone to the sandbox</strong><p>From the number you want to test as a vendor, send "join &lt;code&gt;" to the sandbox number (one-time step).</p></div>
+      <div class="wa-step"><strong>4. Make your server public</strong><p>Terminal 1: <code>npm start</code>. Terminal 2: <code>ngrok http 3000</code>. Copy the https URL it gives you.</p></div>
+      <div class="wa-step"><strong>5. Set the webhook URL in Twilio</strong><p>In Twilio Sandbox settings, under "WHEN A MESSAGE COMES IN": <code>https://your-ngrok-url.ngrok-free.app/webhook/whatsapp</code>, method POST.</p></div>
+      <div class="wa-step"><strong>6. Test it</strong><p>Message the sandbox number from the vendor's phone, in their own language — the dashboard updates live, and the vendor gets an automatic reply in the same language.</p></div>
+      <p class="empty-hint" style="margin-top:16px;">For permanent 24/7 hosting: deploy this backend to Render.com or Railway.app (both free tier) — you'll get a permanent URL and won't need ngrok anymore.</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script src="/nav.js"></script>
+</body>
+</html>

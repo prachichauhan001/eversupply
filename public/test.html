@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Sensing — EverSupply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-layout">
+  <div id="navbar"></div>
+  <div class="content-area">
+  <div class="shell page-fade">
+    <div class="eyebrow wa">💬 WhatsApp Sensing</div>
+    <h1>Live Sensing Demo</h1>
+    <p class="subtitle">This chat window shows real WhatsApp messages the moment they arrive — no click needed. You can also send a test message below to try it yourself. Both use the exact same <code>/webhook/whatsapp</code> AI logic.</p>
+
+    <div class="grid2">
+      <div class="panel">
+        <div class="panel-title">Send an Update</div>
+        <div class="panel-note">Type or speak as the vendor would on WhatsApp</div>
+
+        <label>Vendor</label>
+        <select id="testVendorSelect"></select>
+
+        <label>Message</label>
+        <div class="input-row" style="margin-bottom:6px;">
+          <button class="btn-mic" id="micBtn">🎤 Speak</button>
+        </div>
+        <textarea id="testMessage" placeholder="e.g. no power, machine is down, will be 2 days late..."></textarea>
+        <p class="empty-hint" id="micWarning" style="display:none;">Voice input works best in Chrome/Edge.</p>
+
+        <div class="samples">
+          <button class="sample-chip" data-sample="No power in the area, machine is down, at least 2 days delay expected">⚡ Power cut</button>
+          <button class="sample-chip" data-sample="Everything is fine, order will be ready on time">✅ All good</button>
+          <button class="sample-chip" data-sample="Machine broke down, technician has been called">🔧 Machine issue</button>
+          <button class="sample-chip" data-sample="Two workers are sick, order will move a bit slower">🧑‍🏭 Worker shortage</button>
+        </div>
+
+        <button class="btn-whatsapp" id="testSendBtn" style="margin-top:18px; width:100%;">💬 Send via WhatsApp Simulation</button>
+
+        <div class="pipeline" id="pipeline">
+          <div class="pipe-step"><div class="pipe-dot" data-step="sense"></div><div class="pipe-label" data-step="sense">Sensing</div></div>
+          <div class="pipe-step"><div class="pipe-dot" data-step="scenario"></div><div class="pipe-label" data-step="scenario">Scenario</div></div>
+          <div class="pipe-step"><div class="pipe-dot" data-step="inventory"></div><div class="pipe-label" data-step="inventory">Inventory</div></div>
+          <div class="pipe-step"><div class="pipe-dot" data-step="logistics"></div><div class="pipe-label" data-step="logistics">Logistics</div></div>
+          <div class="pipe-step"><div class="pipe-dot" data-step="compliance"></div><div class="pipe-label" data-step="compliance">Compliance</div></div>
+          <div class="pipe-step"><div class="pipe-dot" data-step="human"></div><div class="pipe-label" data-step="human">Human</div></div>
+        </div>
+
+        <div class="result-card" id="testResultCard">
+          <span class="risk-badge" id="testRiskBadge">—</span>
+          <div class="result-reason" id="testReason"></div>
+          <div class="result-meta" id="testMeta"></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">💬 WhatsApp Conversation</div>
+        <div class="panel-note">Live feed — updates automatically every few seconds. Real messages from the vendor's actual phone are marked 📲, refreshing here without any click needed.</div>
+        <div class="wa-phone">
+          <div class="wa-header">
+            <div class="wa-avatar">🧵</div>
+            <div>
+              <div class="wa-header-name">EverSupply Bot</div>
+              <div class="wa-header-sub" id="waHeaderSub">Select a vendor to begin</div>
+            </div>
+          </div>
+          <div class="wa-body" id="waBody">
+            <div class="wa-empty">No messages yet</div>
+          </div>
+          <div class="wa-footer">Powered by Twilio WhatsApp API (simulated)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script src="/nav.js"></script>
+<script src="/app.js"></script>
+<script>initTestPage();</script>
+</body>
+</html>
